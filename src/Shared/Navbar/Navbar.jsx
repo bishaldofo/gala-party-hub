@@ -21,7 +21,7 @@ const Navbar = () => {
                   <li><a>Item 3</a></li>
                   </ul>
                </div>
-               <Link className="normal-case font-bold text-xl" to="/">GalaPerfection</Link>
+               <Link className="normal-case text-orange-600 font-bold text-xl" to="/">GalaPerfection</Link>
                <a ></a>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -40,7 +40,7 @@ const Navbar = () => {
                </ul>
             </div>
             <div className="navbar-end">
-               <a className="btn">Login</a>
+               <button className="btn"><Link to='/login'>Login</Link></button>
             </div>
          </div>
       </div>

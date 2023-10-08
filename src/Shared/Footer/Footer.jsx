@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
-      <div>
-         <footer className="footer p-10 bg-base-200 text-base-content">
+      <div className="bg-[#F2F2F2]">
+         <footer className="footer max-w-7xl m-auto py-10 px-2 bg-base-200 text-base-content">
             <aside>
                <Link className="normal-case font-bold text-xl" to="/">GalaPerfection</Link>
-               <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+               <p>Providing reliable tech since 1992</p>
             </aside> 
             <nav>
                <header className="footer-title">Services</header> 
