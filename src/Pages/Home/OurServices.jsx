@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const OurServices = ({service}) => {
 
-   const {title, category, price, description, thumbURL, descriptionImageURL} = service || {}
+   const {id, title, category, price, description, thumbURL} = service || {}
    
    return (
       <div className="">
@@ -10,19 +10,27 @@ const OurServices = ({service}) => {
             <div>
                <figure><img className="w-full h-52 object-cover" src={thumbURL} alt={title} /></figure>
                <div className="card-actions ml-5 mt-2">
-                  <button className="btn btn-primary px-5 py-2 text-xl bg-orange-600 hover:bg-orange-700 border-none text-white">${price}</button>
+                  <span className="text-xl text-orange-600">${price}</span>
                </div>
             </div>
             <div className="card-body">
-               <h2 className="card-title"><Link to='/serviceDetails'>{title}</Link></h2>
-               <p>
+               <div className="flex justify-between items-center">
+                  <h2 className="card-title">{title}</h2>
+                  <div>
+                     <button className="border-none text-lg rounded-md text-white py-1 px-6 bg-orange-600 hover:bg-orange-700"><Link to={`/services/${id}`}>Details</Link></button>
+                  </div>
+               </div>
+               
+               <div className="mt-2">
                   {
                      description.length > 200 ?
                         <p>{description.slice(0, 200)}</p>
                         : <p>{description}</p>
                   }
-               </p>
+               </div>
+               
             </div>
+
          </div>
       </div>
    );

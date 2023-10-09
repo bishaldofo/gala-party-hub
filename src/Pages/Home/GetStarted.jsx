@@ -1,7 +1,7 @@
 const GetStarted = () => {
    return (
       <div className="bg-[#F5F0F0] py-20">
-         <div className="w-1/2 m-auto">
+         <div className="w-full md:w-1/2 m-auto">
             <h2 className="text-orange-600 text-2xl font-semibold text-center">Let’s Get it Started!</h2>
             <form className="w-3/4 m-auto mt-8">
                <div className="form-control">

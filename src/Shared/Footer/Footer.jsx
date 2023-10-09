@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
-      <div className="bg-[#1F1F1F]">
+      <div className="bg-[#1F1F1F] px-4">
          <footer className="footer max-w-7xl m-auto py-10 px-2 bg-[#1F1F1F] text-white">
             <aside>
                <Link className="normal-case font-bold text-xl" to="/">GalaPerfection</Link>
