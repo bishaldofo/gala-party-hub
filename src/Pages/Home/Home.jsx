@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import CreativeTeam from "./CreativeTeam";
 import GetStarted from "./GetStarted";
@@ -19,8 +19,13 @@ const Home = () => {
             <h2 className="text-5xl font-semibold text-orange-600 text-center">Our Services</h2>
             <div className="grid grid-cols-3 gap-10 my-5">
                {
-                  services?.map(service => <OurServices key={service} service={service}></OurServices>)
+                  services.length > 7 ? 
+                     services?.slice(0, 6).map(service => <OurServices key={service} service={service}></OurServices>) 
+                     : services
                }
+            </div>
+            <div className="text-center mt-10">
+               <button className="btn btn-primary bg-orange-600 hover:bg-orange-700 text-lg border-none text-white"><Link to='/event'>Load more</Link></button>
             </div>
          </div>
          

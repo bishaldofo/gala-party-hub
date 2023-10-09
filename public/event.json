@@ -52,5 +52,32 @@
     "description": "Step into a world of mystery and glamour with our Masquerade Parties. These enchanting events are perfect for those seeking an unforgettable and magical experience. Attendees adorn exquisite masks, transforming themselves into elegant and mysterious figures. Our dedicated team will craft an atmosphere of opulence, with ornate decorations, captivating entertainment, and gourmet cuisine. Whether it's a sophisticated ball or an intimate soirée, our Masquerade Parties are an enchanting blend of tradition and modernity, sure to leave a lasting impression. Join us for a night of intrigue, beauty, and masked revelry.",
     "thumbURL": "https://i.ibb.co/d443YHz/Masquerade-Parties-thumb.jpg",
     "descriptionImageURL": "https://i.ibb.co/yXHf6T0/Masquerade-Parties.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Wedding Parties",
+    "category": "Wedding",
+    "price": 800,
+    "description": "Experience the wedding of your dreams with our Wedding Extravaganza package. We specialize in creating magical moments that celebrate your love story. From exquisite venues and stunning decorations to personalized vows and gourmet dining, we ensure your special day is absolutely perfect. Let us make your wedding a fairytale come true, filled with love, joy, and cherished memories.",
+    "thumbURL": "https://i.ibb.co/r5x0f1z/pexels-agung-pandit-wiguna-2788488.jpg",
+    "descriptionImageURL": "https://i.ibb.co/6s06y1z/pexels-kayla-renee-1608590.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Kids' Adventure Camps",
+    "category": "Kid",
+    "price": 350,
+    "description": "Give your children a summer they'll never forget with our Kids' Adventure Camps. From exciting outdoor adventures to creative arts and crafts, we provide a safe and engaging environment for kids to explore, learn, and have fun. Our experienced staff ensures a memorable and educational experience for your young adventurers.",
+    "thumbURL": "https://i.ibb.co/nwx54ty/pexels-gerald-yambao-2413238.jpg",
+    "descriptionImageURL": "https://i.ibb.co/vch694V/pexels-josh-willink-1157389.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Retirement Celebrations",
+    "category": "Family",
+    "price": 400,
+    "description": "Celebrate a lifetime of achievements with our Retirement Celebrations. Whether it's a quiet gathering of close friends and family or a grand retirement party, we help honor the retiree's contributions and mark the beginning of a new chapter. From heartfelt speeches to nostalgic photo displays, we create retirement events filled with warmth and appreciation.",
+    "thumbURL": "https://i.ibb.co/Chx4gL0/pexels-pixabay-209728.jpg",
+    "descriptionImageURL": "https://i.ibb.co/3vyHk7f/pexels-matheus-bertelli-3856033.jpg"
   }
 ]

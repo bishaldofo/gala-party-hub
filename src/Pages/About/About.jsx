@@ -1,7 +1,13 @@
+import Navbar from "../../Shared/Navbar/Navbar";
+import Banner from "../Home/Banner";
+
 const About = () => {
    return (
       <div>
-         <h2>About Page</h2>
+         <div>
+            <Navbar></Navbar>
+            <Banner></Banner>
+         </div>
       </div>
    );
 };

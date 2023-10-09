@@ -10,7 +10,7 @@ const OurServices = ({service}) => {
             <div>
                <figure><img className="w-full h-52 object-cover" src={thumbURL} alt={title} /></figure>
                <div className="card-actions ml-5 mt-2">
-                  <button className="btn btn-primary px-5 py-2 text-xl">${price}</button>
+                  <button className="btn btn-primary px-5 py-2 text-xl bg-orange-600 hover:bg-orange-700 border-none text-white">${price}</button>
                </div>
             </div>
             <div className="card-body">

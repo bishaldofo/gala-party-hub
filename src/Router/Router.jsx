@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import About from "../Pages/About/About";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Register from "../Pages/Login/Register";
+import Event from "../Pages/Event/Event";
 
 const router = createBrowserRouter([
    {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
          {
             path: "/about",
             element: <About></About>
+         },
+         {
+            path: "/event",
+            element: <Event></Event>,
+            loader: () => fetch('event.json')
          },
          {
             path: "/serviceDetails",

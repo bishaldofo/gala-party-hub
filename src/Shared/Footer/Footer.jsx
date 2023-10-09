@@ -2,25 +2,27 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
-      <div className="bg-[#F2F2F2]">
-         <footer className="footer max-w-7xl m-auto py-10 px-2 bg-base-200 text-base-content">
+      <div className="bg-[#1F1F1F]">
+         <footer className="footer max-w-7xl m-auto py-10 px-2 bg-[#1F1F1F] text-white">
             <aside>
                <Link className="normal-case font-bold text-xl" to="/">GalaPerfection</Link>
-               <p>Providing reliable tech since 1992</p>
+               <p>Providing reliable Service since 1992</p>
             </aside> 
             <nav>
                <header className="footer-title">Services</header> 
-               <a className="link link-hover">Branding</a> 
-               <a className="link link-hover">Design</a> 
-               <a className="link link-hover">Marketing</a> 
-               <a className="link link-hover">Advertisement</a>
+               <a className="link link-hover">Corporate Meetings</a> 
+               <a className="link link-hover">Anniversaries</a> 
+               <a className="link link-hover">Birthday Parties</a> 
+               <a className="link link-hover">Family Celebrations</a>
+               <a className="link link-hover">Graduation and Prom Night</a>
+               <a className="link link-hover">Masquerade Parties</a>
             </nav> 
             <nav>
-               <header className="footer-title">Company</header> 
+               <header className="footer-title">Company</header>
+               <a className="link link-hover">Home</a> 
                <a className="link link-hover">About us</a> 
-               <a className="link link-hover">Contact</a> 
-               <a className="link link-hover">Jobs</a> 
-               <a className="link link-hover">Press kit</a>
+               <a className="link link-hover">Event</a>
+               <a className="link link-hover">Contact</a>
             </nav> 
             <nav>
                <header className="footer-title">Legal</header> 
