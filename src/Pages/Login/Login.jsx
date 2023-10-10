@@ -1,13 +1,26 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import swal from 'sweetalert';
 
 const Login = () => {
+   const [loginError, setLoginError] = useState()
 
-   const { signIn } = useContext(AuthContext)
+   const { signIn, googleSignIn } = useContext(AuthContext)
    const location = useLocation()
    const navigate = useNavigate()
+
+   const handleGoogle = () => {
+      const googleSign = googleSignIn().then(result => console.log(result.user))
+      if (googleSign) {
+         navigate(
+            location?.state ? location.state : '/'
+         )
+      }
+      
+   }
+   
 
    const handleLogin = e => {
       e.preventDefault();
@@ -18,12 +31,14 @@ const Login = () => {
       signIn(email, password)
          .then(result => {
             console.log(result.user)
+            swal("Good job!", "Logged in Successfully!", "success");
             navigate(
                location?.state ? location.state : '/'
             )
          })
          .catch(error => {
             console.log(error)
+            setLoginError("Email and password doesn't match!")
          })
    }
 
@@ -40,7 +55,7 @@ const Login = () => {
                   <p className="text-base font-medium mb-5 text-center">Not a member yet? <Link className="font-semibold text-orange-600" to='/register'>Join now</Link></p>
 
                   <div className="text-center">
-                     <button className="btn m-auto w-full"><FaGoogle></FaGoogle>Sign in with Google</button>
+                     <button onClick={handleGoogle} className="btn m-auto w-full"><FaGoogle></FaGoogle>Sign in with Google</button>
                      <p className="my-5 text-orange-600 text-center">Or log in with your email</p>
                   </div>
                   <form onSubmit={handleLogin}>
@@ -61,6 +76,11 @@ const Login = () => {
                      </div>
                      <div className="form-control mt-6">
                         <button className="btn btn-primary bg-orange-600 border-none hover:bg-orange-700">Login</button>
+                     </div>
+                     <div className="mt-2">
+                        {
+                           loginError && <p className="text-red-600">{loginError}</p>
+                        }
                      </div>
                   </form>
                </div>

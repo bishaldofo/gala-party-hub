@@ -7,6 +7,8 @@ const Navbar = () => {
 
    const { user, logOut } = useContext(AuthContext)
 
+   console.log(user)
+
    const handleSignOut = () => {
       logOut()
          .then()
@@ -18,7 +20,6 @@ const Navbar = () => {
       <li><NavLink to='/'>Home</NavLink></li>
       <li><NavLink to='/about'>About</NavLink></li>
       <li><NavLink to='/event'>Event</NavLink></li>
-      <li><NavLink to='/blog'>Blog</NavLink></li>
    </>
    return (
       <div className="max-w-7xl mx-auto">
@@ -45,13 +46,21 @@ const Navbar = () => {
                
                {
                   user ? 
-                  <details className="dropdown">
-                     <summary className="btn border-none hover:bg-transparent bg-transparent p-0 m-0">{
-                                 user ? <img className="w-10" src={userDefaultPic} /> : <span>logout</span>
-                              }</summary>
-                        <ul className="menu dropdown-content z-[1] right-0 rounded-box w-40"><button onClick={handleSignOut} className="btn w-full">Sign Out</button>
-                        </ul>
-                     </details>
+                  <div className="dropdown dropdown-end">
+                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                        {user.photoURL ? (
+                           <img src={user.photoURL} alt="User Avatar" />
+                        ) : (
+                           <img src={userDefaultPic} alt="User Avatar" />
+                        )}
+                        </div>
+                     </label>
+                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li><button>{user.displayName}</button></li>
+                        <li><button onClick={handleSignOut}>Logout</button></li>
+                     </ul>
+                  </div>
                      :
                      <Link to='/login'><button className="btn">Login</button></Link>
                }

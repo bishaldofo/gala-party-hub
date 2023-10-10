@@ -6,21 +6,26 @@ const GetStarted = () => {
             <form className="w-3/4 m-auto mt-8">
                <div className="form-control">
                   <label className="label">
-                     <span className="label-text">Email</span>
+                     <span className="label-text">Name</span>
                   </label>
-                  <input type="email" placeholder="email" className="input input-bordered" required />
+                  <input type="text" placeholder="Your name" className="input input-bordered" required />
                </div>
                <div className="form-control">
                   <label className="label">
-                     <span className="label-text">Password</span>
+                     <span className="label-text">Email</span>
                   </label>
-                  <input type="password" placeholder="password" className="input input-bordered" required />
-                  <label className="label">
-                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                  </label>
+                  <input type="email" placeholder="Email" className="input input-bordered" required />
                </div>
+
+               <div className="form-control">
+                  <label className="label">
+                     <span className="label-text">Message</span>
+                  </label>
+                  <textarea placeholder="Write your message..." className="textarea textarea-bordered textarea-lg w-full" ></textarea>
+               </div>
+
                <div className="form-control mt-6">
-                  <button className="btn btn-primary bg-orange-600 border-none hover:bg-orange-700">Login</button>
+                  <button className="btn btn-primary bg-orange-600 border-none hover:bg-orange-700">Send</button>
                </div>
             </form>
          </div>

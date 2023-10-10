@@ -2,9 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import CreativeTeam from "./CreativeTeam";
 import GetStarted from "./GetStarted";
-import OurNewsEvent from "./OurNewsEvent";
 import OurServices from "./OurServices";
-import Testimonial from "./Testimonial";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Footer from "../../Shared/Footer/Footer";
 import { useContext } from "react";
@@ -37,10 +35,7 @@ const Home = () => {
                <button className="btn btn-primary bg-orange-600 hover:bg-orange-700 text-lg border-none text-white"><Link to='/event'>Load more</Link></button>
             </div>
          </div>
-         
-         <Testimonial></Testimonial>
          <CreativeTeam></CreativeTeam>
-         <OurNewsEvent></OurNewsEvent>
          <GetStarted></GetStarted>
          <Footer></Footer>
       </div>

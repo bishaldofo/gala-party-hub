@@ -23,11 +23,6 @@ const router = createBrowserRouter([
             loader: () => fetch('/event.json'),
          },
          {
-            path: "/blogSection",
-            element: <BlogSection></BlogSection>,
-            loader: () => fetch('/event.json')
-         },
-         {
             path: "/services/:uid",
             element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
             loader: () => fetch('/event.json')
@@ -38,7 +33,7 @@ const router = createBrowserRouter([
          },
          {
             path: "/event",
-            element: <Event></Event>,
+            element: <PrivateRoute><Event></Event></PrivateRoute>,
             loader: () => fetch('/event.json')
          },
          {

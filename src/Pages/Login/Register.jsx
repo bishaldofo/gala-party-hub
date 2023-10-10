@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { FaGoogle } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import swal from 'sweetalert';
 
 const Register = () => {
 
-   const {createUser} = useContext(AuthContext)
+   const { createUser } = useContext(AuthContext)
+   const [registerError, setRegisterError] = useState()
 
    const handleRegister = e => {
       e.preventDefault();
@@ -15,14 +16,28 @@ const Register = () => {
       const email = form.get('email');
       const password = form.get('password');
       console.log(name, email, password, photo)
+         
+      setRegisterError('')
+
+      if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!]).{6,}$/.test(password)) {
+         setRegisterError(
+            "Password must contain at least six characters, at least one number and both lower and uppercase letters and special characters!"
+         )
+         return
+      }
 
       createUser(email, password)
          .then(result => {
-         console.log(result.user)
+            console.log(result.user)
+            swal("Good job!", "Account Created Successfully!", "success");
          })
          .catch(error => {
             console.log(error)
+            setRegisterError('Email already exist!')
          })
+      
+      
+         
    }
 
    return (
@@ -35,8 +50,7 @@ const Register = () => {
                </div>
                <div className="py-10 px-5">
                   <div className="text-center">
-                     <button className="btn m-auto w-full"><FaGoogle></FaGoogle>Sign in with Google</button>
-                     <p className="my-2 text-orange-600 text-center">Or Sign up with your email</p>
+                     <p className="my-2 text-orange-600 text-center">Sign up with your email</p>
                   </div>
                   <form onSubmit={handleRegister}>
                      <div className="form-control">
@@ -67,7 +81,12 @@ const Register = () => {
                         <button className="btn btn-primary bg-orange-600 border-orange-600">Register</button>
                      </div>
                   </form>
-                  <div className="text-base font-medium mt-5 text-center">Already have an account? <Link className="font-semibold text-orange-600" to='/login'>Log in</Link></div>
+                  <div className="text-base font-medium mt-5">Already have an account? <Link className="font-semibold text-orange-600" to='/login'>Log in</Link></div>
+                  <div className="mt-2">
+                  {
+                     registerError && <p className="text-red-600">{registerError}</p>
+                  }
+                  </div>
                </div>
             </div>
          </div>
